@@ -1,0 +1,11 @@
+Aclaraciones respecto a los modelos
+
+-Hice un app.R por cada modelo pues me pareció más organizado hacer uno por cada modelo, en vez de un solo aplicativo para
+los tres, lo cual hubiese hecho que el aplicativo fuese muy disparejo en cuanto al tamaño de la "casilla" con las variables
+que se podían variar y  la "casilla" con resultados obtenidos (gráficos, tablas, etc).
+
+-Para obtener el error relativo, tomé como valor teórico el obtenido por la librería EpiDynamics. Al utilizar ese error 
+determiné, durante pruebas que realicé variando los parámetros del modelo, que el mejor método de la función ODE es el 
+"rk4". Sin embargo, los aplicativos inician siempre con el método de euler de la función ODE, para que se pueda apreciar 
+la diferencia entre los resultados de ODE y EpiDynamics (pues con "rk4" también hay diferencias con el modelo por ODE, 
+pero son mucho menores que con "euler").
